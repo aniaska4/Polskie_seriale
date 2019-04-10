@@ -1,0 +1,64 @@
+body {
+    font-family: 'Comic';
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 600px;
+    header {
+        .title {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            .main_nav {
+                border: 1px solid white;
+                width: 80%;
+                height: 100px;
+                border-radius: 10px 10px;
+                margin-top: 20px;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .start {
+        .startButton {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            button {
+                width: 100px;
+                height: 50px;
+                border-radius: 10px 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
