@@ -17,12 +17,13 @@ Quiz.prototype.isEnded = function () {
 }
 
 //dodajemy pkt za dobrą odpowiedź
-Quiz.prototype.addPoint = function () {
-    this.questionIndex ++;
+Quiz.prototype.guess = function () {
 
     if (this.getQuestionIndex().correctAnswer()) {
         this.score++;
     }
+    
+    this.questionIndex ++;
 }
 
 
@@ -94,7 +95,7 @@ const questions = [
    // 3
     new Questions("Kim był tytułowy bohater Kariery Nikodema Dyzmy?", ["Taksówkarzem", "Hydraulikiem", "Grabarzem", "Sprzedawcą"], "Grabarzem"),
     // 4
-    new Questions("Kto grał rolę Rzeckiego w serialu Lalka?", ["Andrzej Zaorski", "Jerzy Kamas", "Witold Pyrkosz", "Frnciszek Pieczka"], "Jerzy Kamas"),
+    new Questions("Kto grał rolę Rzeckiego w serialu Lalka?", ["Andrzej Zaorski", "Jerzy Kamas", "Witold Pyrkosz", "Franciszek Pieczka"], "Jerzy Kamas"),
     // 5
     new Questions("Kim z zawodu był Zdzisław Kołek, postać grana przez Jerzego Kryszaka w serialu Alternatywy 4?", ["Budowlańcem", "Nauczycielem", "Lekarzem", "Inżynierem"], "Lekarzem"),
     // 6
