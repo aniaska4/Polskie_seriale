@@ -13,24 +13,26 @@
 </head>
 
 <body>
-    <div id="quiz">
-        <section class="question_container">
-            <p id="question"></p>
-            <div class="buttons">
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
-            </div>
-        </section>
-        <footer>
-            <p id="points"></p>
-        </footer>
-
-
+    <div class="main_contener_quiz">
+        <div id="quiz">
+            <section class="question_container">
+                <p id="question"></p>
+                <div class="buttons">
+                    <div class="first_part_buttons">
+                        <button id="btn0" class="btn"><span id="choice0"></span></button>
+                        <button id="btn1" class="btn"><span id="choice1"></span></button>
+                    </div>
+                    <div class="second_part_buttons">
+                        <button id="btn2" class="btn"><span id="choice2"></span></button>
+                        <button id="btn3" class="btn"><span id="choice3"></span></button>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p id="points"></p>
+            </footer>
+        </div>
     </div>
-
-
     <script defer src="app.js"></script>
 
 </body>

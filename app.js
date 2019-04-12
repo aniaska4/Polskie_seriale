@@ -18,7 +18,6 @@ Quiz.prototype.isEnded = function () {
 
 //dodajemy pkt za dobrą odpowiedź
 Quiz.prototype.guess = function () {
-
     if (this.getQuestionIndex().correctAnswer()) {
         this.score++;
     }
@@ -39,6 +38,7 @@ function Questions (text, choices, answer) {
     this.answer = answer
 }
 
+//czy udzielono prawidłowej odpowiedzi
 Questions.prototype.correctAnswer = function (choice) {
     return choice === this.answer;
 };
@@ -89,7 +89,7 @@ function showScores() {
 
 const questions = [
     // 1
-    new Questions("Jak się nazywała głowna aktorka grająca w serialu Noce i dnie?", ["Anna Dymna", "Irena Kwiatkowska", "Ewa Szykulska", "Jadwiga Barańska"], "Jadwiga Barańska"),
+    new Questions("Jak się nazywała główna aktorka grająca w serialu Noce i Dnie?", ["Anna Dymna", "Irena Kwiatkowska", "Ewa Szykulska", "Jadwiga Barańska"], "Jadwiga Barańska"),
     // 2
     new Questions("Na podstawie czyjej powieści został nakręcony serial Hrabina Cosel?", ["Henryk Sienkiewicz", "Eliza Orzeszkowa", "Marii Krantz", "Jozefa Ignacego Kraszewskiego"], "Jozefa Ignacego Kraszewskiego"),
    // 3
