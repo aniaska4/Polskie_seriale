@@ -1,42 +1,43 @@
 ////////////////////////////// Quiz ////////////////////////////////////////////////
-
-function Quiz(questions) {
-    this.score = 0;
-    this.questions = questions;
-    this.questionIndex = 0;
-}
-
-//pytania
-Quiz.prototype.getQuestionIndex = function () {
-    return this.questions[this.questionIndex];
-}
-
-// sprawdzamy czy jest koniec gry
-Quiz.prototype.isEnded = function () {
-    return this.questions.length === this.questionIndex;
-}
-
-//dodajemy pkt za dobrą odpowiedź
-Quiz.prototype.guess = function () {
-    if (this.getQuestionIndex().correctAnswer()) {
-        this.score++;
+class Quiz {
+    constructor(questions) {
+        this.score = 0;
+        this.questions = questions;
+        this.questionIndex = 0;
     }
-    
-    this.questionIndex ++;
+    //pytania
+    getQuestionIndex() {
+        return this.questions[this.questionIndex];
+    }
+    // sprawdzamy czy jest koniec gry
+    isEnded() {
+        return this.questions.length === this.questionIndex;
+    }
+    //dodajemy pkt za dobrą odpowiedź
+    guess(answer) {
+        if (this.getQuestionIndex().correctAnswer(answer)) {
+            this.score++;
+        }
+        this.questionIndex++;
+    }
 }
+
+
+
 
 /////////////////////////////////////// Questions //////////////////////////////////
-
-function Questions (text, choices, answer) {
-    this.text = text,
-    this.choices = choices,
-    this.answer = answer
+class Questions {
+    constructor(text, choices, answer) {
+        this.text = text,
+            this.choices = choices,
+            this.answer = answer;
+    }
+    //czy udzielono prawidłowej odpowiedzi
+    correctAnswer(choice) {
+        return choice === this.answer;
+    }
 }
 
-//czy udzielono prawidłowej odpowiedzi
-Questions.prototype.correctAnswer = function (choice) {
-    return choice === this.answer;
-};
 
 
 ////////////////////////////////////////////////
@@ -81,6 +82,19 @@ function showScores() {
     gameOverHTML += "<h2 id='score'> Twój wynik to: " + quiz.score + "</h2>";
     let element = document.querySelector("#quiz");
     element.innerHTML = gameOverHTML;
+    element.style.padding = "35px";
+    element.style.fontSize = "30px";
+};
+
+function startGame() {
+    let start = "<nav class='title'><h2>Polskie seriale</h2></div></nav>";
+        start += "<button type='submit'>START</button>";
+        let element = document.querySelector('#startGame');
+        element.innerHTML = start;
+        let button = document.querySelector('button');
+        button.onclick = function () {
+            populate();
+        }
 };
 
 
