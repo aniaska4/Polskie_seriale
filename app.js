@@ -25,11 +25,6 @@ Quiz.prototype.guess = function () {
     this.questionIndex ++;
 }
 
-
-
-
-
-
 /////////////////////////////////////// Questions //////////////////////////////////
 
 function Questions (text, choices, answer) {
@@ -59,6 +54,7 @@ function populate() {
         for (let i = 0; i < choices.length; i++) {
             let element = document.querySelector("#choice" + i);
             element.innerHTML = choices[i];
+            element.style.fontSize="16px";
             guess("btn" + i, choices[i]);
         }
         showProgress();
@@ -76,7 +72,8 @@ function guess(id, guess) {
 function showProgress() {
     let currentQuestionNumber = quiz.questionIndex + 1;
     let element = document.querySelector('#points');
-    element.innerText = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+    element.innerText = `Pytanie ${currentQuestionNumber}  z  ${quiz.questions.length}`;
+    element.style.fontSize="20px"
 }
 
 function showScores() {

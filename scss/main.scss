@@ -60,12 +60,17 @@ body {
                 height: 50px;
                 border-radius: 10px 10px;
                 text-transform: uppercase;
+                button:hover{
+                    background-color:$main_color;
+                    color: white;
+                }
             }
         }
     }
 }
 
 .main_contener_quiz {
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     #quiz {
@@ -74,14 +79,17 @@ body {
         background-color: black;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         flex-direction: column;
+        border: 2px solid $main_color;    
+        border-radius: 0.5em;
         .question_container {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             width: 90%;
             height: 50%;
-            margin-top: 15px;
+            margin-top: 50px;
             #question {
                 font-size: 35px;
                 border: 2px solid $main_color;
@@ -94,7 +102,7 @@ body {
                 justify-content: space-between;
                 flex-direction: column;
                 width: 100%;
-                height: 70%;
+                height: 45%;
                 margin-top: 25px;
                 .first_part_buttons {
                     display: flex;                    
@@ -105,6 +113,7 @@ body {
                         height: 50px;
                         border: 1px solid $main_color;
                         border-radius: 0.5em;
+                        
                     }
                     .btn:hover{
                         background-color:$main_color;
@@ -114,6 +123,12 @@ body {
                 .second_part_buttons {
                     @extend .first_part_buttons
                 }
+            }
+        }
+        footer {
+            padding-bottom: 15px;
+            #points{
+
             }
         }
     }
