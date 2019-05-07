@@ -23,8 +23,6 @@ class Quiz {
 }
 
 
-
-
 /////////////////////////////////////// Questions //////////////////////////////////
 class Questions {
     constructor(text, choices, answer) {
@@ -122,7 +120,7 @@ const questions = [
     // 11
     new Questions("Jak nazywał się policjant grany przez Cezarego Pazurę w serialu 13 posterunek?", ["Cezary Baryka", "Cezary Stępień", "Cezary Cezary", "Cezary Słoik"], "Cezary Baryka"),
     // 12
-    new Questions("Co po polsku oznacza imię Szarik?", ["Rudy", "Łowca", "Kuleczka", "Czołgista"], "Rudy")
+    new Questions("Co po polsku oznacza imię Szarik?", ["Rudy", "Łowca", "Kuleczka", "Czołgista"], "Kuleczka")
 ];
 
 var quiz = new Quiz(questions);
